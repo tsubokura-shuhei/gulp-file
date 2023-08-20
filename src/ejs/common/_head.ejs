@@ -1,0 +1,11 @@
+<head>
+  <meta charset="utf-8" />
+
+  <title><% if( title ) { %><%- title %> | <% } %>サイト名</title>
+  <meta name="description" content="<%- description %>" />
+  <% if(noindex) { %>
+  <meta name="robots" content="noindex,nofollow" />
+  <% } %>
+
+  <link rel="stylesheet" href="<%- rootPath %>css/style.css" />
+</head>

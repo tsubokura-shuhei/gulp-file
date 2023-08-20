@@ -1,0 +1,16 @@
+.container {
+  background-color: rgb(106, 255, 150);
+  p {
+    color: rgb(255, 0, 102);
+    transform: translateX(100px);
+  }
+  p:hover {
+    color: aqua;
+    transform: translateX(0px);
+  }
+}
+p {
+  color: red;
+  font-weight: bold;
+  padding: 10px 20px;
+}

@@ -1,0 +1,17 @@
+<% title = 'アバウトページ'; description = '説明文'; rootPath = './'; noindex =
+false; %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(rootPath + 'common/_head') %>
+  <body>
+    <!-- header -->
+    <%- include('./common/_header') %>
+
+    <p>ここに本文</p>
+    <img src="<%- rootPath + 'img/image.jpg' %>" alt="" />
+
+    <!-- footer -->
+    <%- include('./common/_footer') %>
+  </body>
+</html>
