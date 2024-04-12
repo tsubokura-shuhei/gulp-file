@@ -1,16 +1,102 @@
+//************************************************************
+// ブレイクポイント
+//************************************************************
+$pc: 769px; // PC
+$tab: 768px; // タブレット
+$sp: 480px; // スマホ
+
+@mixin pc {
+  @media (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+//（参考ページ）https://macoblog.com/sass_media_query/
+
+//************************************************************
+// px->vw変換
+//************************************************************
+
+@function vw($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// (例) iPhone
+// border: 1px solid #ff0000;
+// ↓
+// border: vw(1) solid #ff0000;
+
+// (例) Android基準
+// border: 1px solid #ff0000;
+// ↓
+// border: vw(1, 360) solid #ff0000;
+
+//（参考ページ）https://qiita.com/DaisukeNishi/items/36bf3b0e9bc03d892ccb
+
+//************************************************************
+// スタイル
+//************************************************************
+
 .container {
-  background-color: rgb(106, 255, 150);
+  background-color: rgb(166, 255, 106);
   p {
-    color: rgb(255, 0, 102);
+    color: rgb(166, 255, 106);
     transform: translateX(100px);
   }
   p:hover {
-    color: aqua;
+    color: rgb(166, 255, 106);
     transform: translateX(0px);
   }
 }
+//pタグ内をブレイクポイントで切り分け
 p {
-  color: red;
-  font-weight: bold;
-  padding: 10px 20px;
+  //PC
+  @include pc {
+    color: rgb(166, 255, 106);
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: vw(16);
+    span {
+      color: red;
+    }
+  }
+
+  //タブレット
+  @include tab {
+    color: rgb(255, 151, 106);
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+
+  //スマホ
+  @include sp {
+    color: rgb(118, 106, 255);
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+}
+
+//px->vwへ変換している記述
+.test {
+  width: 200px;
+  height: 200px;
+  padding: vw(3) vw(2) vw(6) vw(4);
+  background-color: aquamarine;
+  .test2 {
+    width: 100px;
+    height: 100px;
+    margin: vw(6) vw(8) vw(10) vw(14);
+    background-color: rgb(153, 255, 127);
+  }
 }
