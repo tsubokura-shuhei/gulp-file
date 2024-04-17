@@ -17,7 +17,7 @@
     color: rgb(166, 255, 106);
     font-weight: bold;
     padding: 10px 20px;
-    font-size: 4.2666666667vw;
+    font-size: 16px;
   }
   p span {
     color: red;
@@ -28,6 +28,7 @@
     color: rgb(255, 151, 106);
     font-weight: bold;
     padding: 10px 20px;
+    font-size: 4.2666666667vw;
   }
 }
 @media (max-width: 480px) {
@@ -35,6 +36,7 @@
     color: rgb(118, 106, 255);
     font-weight: bold;
     padding: 10px 20px;
+    font-size: 4.2666666667vw;
   }
 }
 
@@ -49,5 +51,64 @@
   height: 100px;
   margin: 1.6vw 2.1333333333vw 2.6666666667vw 3.7333333333vw;
   background-color: rgb(153, 255, 127);
+}
+
+.main {
+  background-color: #c2ffea;
+  padding: 100px;
+}
+.main__textArea {
+  text-align: center;
+  margin: 40px;
+  padding: 40px;
+  background-color: #fff;
+}
+.main__btn--success {
+  text-align: center;
+  margin: 20px 40px;
+  padding: 20px;
+  color: #fff;
+  background-color: #0a7bf5;
+}
+.main__btn--faile {
+  text-align: center;
+  margin: 20px 40px;
+  padding: 20px;
+  color: #fff;
+  background-color: #808080;
+}
+
+.sample {
+  margin-top: 40px;
+  background-color: #f6e1c1;
+  padding: 100px;
+}
+.sample__topArea {
+  text-align: center;
+  background-color: rgb(123, 255, 0);
+  padding: 20px 100px;
+}
+.sample__topArea p {
+  color: #222222;
+}
+.sample__line--mainArea {
+  text-align: center;
+  background-color: #0a7bf5;
+  padding: 20px 100px;
+}
+.sample__line--mainArea p {
+  text-align: center;
+  color: rgb(255, 123, 0);
+  padding: 20px 60px;
+}
+.sample__line--bottomArea {
+  text-align: center;
+  background-color: aqua;
+  padding: 20px 100px;
+}
+.sample__line--bottomArea p {
+  text-align: center;
+  color: rgb(255, 123, 0);
+  padding: 20px 60px;
 }
 /*# sourceMappingURL=map/style.css.map */
