@@ -28,7 +28,7 @@ $sp: 480px; // スマホ
 //************************************************************
 
 @function vw($size, $viewport: 375) {
-  $rate: 100 / $viewport;
+  $rate: calc(100 / $viewport);
   @return $rate * $size * 1vw;
 }
 
@@ -78,7 +78,6 @@ p {
     font-weight: bold;
     padding: 10px 20px;
     font-size: vw(16);
-
   }
 
   //スマホ
@@ -104,8 +103,6 @@ p {
   }
 }
 
-
-
 //************************************************************
 // BEM記述
 //************************************************************
@@ -117,13 +114,13 @@ p {
   color: #fff;
 }
 
-@mixin line{
+@mixin line {
   text-align: center;
   color: rgb(255, 123, 0);
   padding: 20px 60px;
 }
 
-.main{
+.main {
   background-color: #c2ffea;
   padding: 100px;
   &__textArea {
@@ -132,7 +129,7 @@ p {
     padding: 40px;
     background-color: #fff;
   }
-  &__btn{
+  &__btn {
     &--success {
       @include btn;
       background-color: #0a7bf5;
@@ -144,32 +141,32 @@ p {
   }
 }
 
-.sample{
+.sample {
   margin-top: 40px;
   background-color: #f6e1c1;
   padding: 100px;
-  &__topArea{
+  &__topArea {
     text-align: center;
     background-color: rgb(123, 255, 0);
     padding: 20px 100px;
-    p{
+    p {
       color: #222222;
     }
   }
-  &__line{
-    &--mainArea{
+  &__line {
+    &--mainArea {
       text-align: center;
       background-color: #0a7bf5;
       padding: 20px 100px;
-      p{
+      p {
         @include line;
       }
     }
-    &--bottomArea{
+    &--bottomArea {
       text-align: center;
       background-color: aqua;
       padding: 20px 100px;
-      p{
+      p {
         @include line;
       }
     }
